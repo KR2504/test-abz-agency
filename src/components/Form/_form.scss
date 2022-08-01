@@ -1,0 +1,151 @@
+.createUserForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+        @extend %h1;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    &__form {
+        width: 100%;
+        max-width: 380px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__input-container {
+        position: relative;
+        width: 100%;
+        height: 54px;
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+    &__input {
+        @extend %p1;
+        height: 100%;
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid $light-grey;
+        border-radius: 4px;
+        background-color: $background-grey;
+        &--error {
+            border: 2px solid $red;
+        }
+    }
+    &__label {
+        @extend %p1;
+        position: absolute;
+        left: 16px;
+        top: 14px;
+        color: $dark-grey;
+        transition: 0.3s;
+        &--error {
+            color: $red;
+        }
+    }
+    &__input:focus+.createUserForm__label,
+    .not-Empty {
+        top: -7px;
+        background-color: $background-grey;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 500;
+        padding: 0 4px;
+    }
+    &__input-helper {
+        position: absolute;
+        left: 16px;
+        bottom: -18px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: $dark-grey;
+        &--error {
+            color: $red;
+        }
+    }
+    &__user-position {
+        margin-bottom: 50px;
+    }
+    &__file-uploader {
+        position: relative;
+        border: 1px solid $light-grey;
+        border-radius: 4px;
+        width: 100%;
+        height: 54px;
+        display: flex;
+        margin-bottom: 50px;
+        border-collapse: collapse;
+        &--error {
+            border: 2px solid $red;
+        }
+    }
+    &__fileLoad-btn {
+        position: relative;
+        left: -1px;
+        top: -1px;
+        @extend %p1;
+        line-height: 16px;
+        display: block;
+        border: 1px solid rgba(0, 0, 0, 0.871);
+        border-radius: 4px 0px 0px 4px;
+        height: 54px;
+        width: 83px;
+        line-height: 52px;
+        text-align: center;
+        border-collapse: collapse;
+        &--error {
+            border: 2px solid $red;
+            line-height: 50px;
+            left: -2px;
+            top: -2px;
+        }
+    }
+    &__fileName {
+        @extend %p1;
+        padding: 13px 15px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        &--empty {
+            color: $dark-grey;
+        }
+    }
+    &__button {
+        align-self: center;
+        margin-bottom: 50px;
+    }
+    &__positions-title {
+        @extend %p1;
+        margin-bottom: 13px;
+    }
+    &__main-inputs {
+        margin-bottom: 43px;
+    }
+    &__responseError {
+        text-align: center;
+        @extend %p1;
+        color: $red;
+        margin-bottom: 20px;
+    }
+}
+
+.successRegistaration {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    &__title {
+        @extend %h1;
+        margin-bottom: 50px;
+    }
+    &__img-container {
+        margin: 0 auto;
+        max-width: 328px;
+        margin-bottom: 100px;
+    }
+    &__img {
+        max-width: 100%;
+        height: 100%;
+    }
+}

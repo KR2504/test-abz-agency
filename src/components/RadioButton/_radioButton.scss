@@ -1,0 +1,42 @@
+.radioButton {
+    &__radio-container {
+        &:not(:last-child) {
+            margin-bottom: 13px;
+        }
+        display: flex;
+        cursor: pointer;
+        user-select: none;
+    }
+    &__input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    &__circle {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $light-grey;
+        border-radius: 50%;
+        margin-right: 12px;
+        &--active {
+            border: 1px solid $light-blue;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $light-blue;
+                top: 4px;
+                left: 4px;
+            }
+        }
+    }
+    &__helper-text {
+        @extend %p1;
+        line-height: 20px;
+    }
+}

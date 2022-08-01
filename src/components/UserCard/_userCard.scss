@@ -1,0 +1,46 @@
+.userCard {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $white;
+    text-align: center;
+    width: 100%;
+    &__avatar {
+        margin-bottom: 14px;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+    }
+    &__text-container {
+        position: relative;
+    }
+    &__name {
+        cursor: pointer;
+        @extend %p1;
+        margin-bottom: 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    &__information {
+        cursor: pointer;
+        @extend %p1;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    &__fullInfo {
+        display: none;
+        &--active {
+            display: block;
+            z-index: 1;
+            @extend %p1;
+            padding: 3px 16px;
+            color: $white;
+            position: absolute;
+            background-color: #000000de;
+            border-radius: 4px;
+            top: 31px;
+            left: 30%;
+        }
+    }
+}

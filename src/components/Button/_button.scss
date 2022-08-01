@@ -1,0 +1,38 @@
+.button {
+    background-color: $yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    font-size: 16px;
+    line-height: 34px;
+    font-weight: 400;
+    width: 100px;
+    height: 34px;
+    border-radius: 80px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    &:hover {
+        background-color: $yellow-hover;
+    }
+    &--space-between {
+        &:first-child {
+            margin-right: 10px;
+        }
+    }
+    &--wide {
+        width: 120px;
+    }
+    &:disabled {
+        pointer-events: none;
+        background-color: $disabled-grey;
+        color: rgba(255, 255, 255, 0.87);
+    }
+    &--hidden {
+        display: none;
+    }
+    &__link {
+        display: block;
+        padding: 0 20px;
+    }
+}
